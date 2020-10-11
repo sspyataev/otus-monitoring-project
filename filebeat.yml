@@ -1,0 +1,9 @@
+filebeat:
+  prospectors:
+    paths:  
+      - /var/log/nginx/*.log
+    input_type: log
+  registry_file: /var/lib/filebeat/registry
+output:
+  logstash:
+  hosts: ["10.166.0.7:5044"]
